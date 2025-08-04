@@ -1,0 +1,313 @@
+/* tailwind */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer components {
+  .form-select {
+    @apply appearance-none rounded border border-solid border-gray-300 bg-no-repeat px-2 pe-5 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none;
+  }
+}
+
+body {
+  font-family: "NotoNaskhArabicFull", system-ui, sans-serif;
+}
+
+/* base */
+@font-face {
+  font-family: NotoNaskhArabicFull;
+  src: url("https://cdn.jsdelivr.net/gh/notofonts/notofonts.github.io/fonts/NotoNaskhArabic/full/ttf/NotoNaskhArabic-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Kitab;
+  src: url(https://fonts.nuqayah.com/kitab-base.woff2?v4);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C,
+    U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3,
+    U+FD3E-FD3F, U+FDF2;
+}
+@font-face {
+  font-family: Kitab;
+  src: url(https://fonts.nuqayah.com/kitab-base-bold.woff2?v4);
+  font-weight: 700;
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C,
+    U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3,
+    U+FD3E-FD3F, U+FDF2;
+}
+@font-face {
+  font-family: Kitab;
+  src: url(https://fonts.nuqayah.com/kitab-phrases.woff2?v4);
+  unicode-range:
+    U+6DE, U+6E9, U+E100-E103, U+FD3E-FD45, U+FD47-FD4F, U+FDFA-FDFB,
+    U+FDFD-FDFF;
+}
+@font-face {
+  font-family: Kitab;
+  src: url(https://fonts.nuqayah.com/kitab-phrases.woff2?v4);
+  font-weight: 700;
+  unicode-range:
+    U+6DE, U+6E9, U+E100-E103, U+FD3E-FD45, U+FD47-FD4F, U+FDFA-FDFB,
+    U+FDFD-FDFF;
+}
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C,
+    U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3,
+    U+FD3E-FD3F, U+FDF2;
+}
+/* needed for ios */
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C,
+    U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3,
+    U+FD3E-FD3F, U+FDF2;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+}
+/* needed for ios */
+@font-face {
+  font-family: Noto;
+  src: url(https://notofonts.github.io/arabic/fonts/NotoNaskhArabic/unhinted/variable-ttf/NotoNaskhArabic[wght].ttf);
+  unicode-range:
+    U+200?, U+60C, U+618-61B, U+61F, U+621-63A, U+640-655, U+65C, U+660-66C,
+    U+670-671, U+6CC, U+6D4, U+6D6-6DD, U+6DF-6E8, U+6EA-6ED, U+8F0-8F3,
+    U+FD3E-FD3F, U+FDF2;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
+}
+@font-face {
+  font-family: SafariFakeFont;
+  src: local("Arial");
+  unicode-range: U+0;
+}
+
+.arabic-text {
+  font-family: "NotoNaskhArabicFull", "Kitab", serif;
+}
+
+/* For prose/reading content */
+.font-prose {
+  font-family: "Kitab", serif;
+}
+
+:root {
+  --dark-blue: #216693;
+  --light-blue: #2995dc;
+}
+
+html {
+  font-size: 24px;
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 23px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 20.5px;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+body {
+  color: #444;
+  overscroll-behavior-y: contain;
+}
+html.safari body {
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: hsl(var(--background));
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.font-arabic {
+  font-family: "NotoNaskhArabicFull", "Kitab", system-ui, sans-serif;
+}
+
+.font-prose {
+  font-family: "Kitab", serif;
+}
+
+a,
+a:visited,
+.btn-link {
+  color: var(--light-blue);
+}
+a,
+button,
+label,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.full-height {
+  height: calc(100vh - var(--top-offset, 0px));
+  overflow: auto;
+  /* Pad the bottom, only needed for iOS PWA with home bar */
+  padding-bottom: min(21px, env(safe-area-inset-bottom, 0px));
+}
+
+/* Buttons and inputs */
+.btn {
+  border: 1px solid #aaa;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  margin: 0 2px;
+  background-image: linear-gradient(to bottom, #fafbfc, #e9eced 90%);
+  font-size: 0.8rem;
+}
+.btn.active {
+  background-image: linear-gradient(to top, #fafbfc, #e9eced 90%);
+}
+.btn[disabled] {
+  cursor: not-allowed;
+  color: #aaa;
+}
+html.safari button:active {
+  color: inherit;
+}
+html.user-is-tabbing button {
+  outline: revert;
+}
+label,
+select {
+  cursor: pointer;
+}
+textarea {
+  padding: 0.2rem 0.3rem;
+  border-radius: 3px;
+  margin-bottom: 0.2rem;
+  border: 1px solid #aaa;
+}
+
+form textarea {
+  display: block;
+  width: 100%;
+}
+textarea:focus {
+  outline: 0;
+}
+html.ios input,
+html.ios select,
+html.ios textarea {
+  font-size: 16px !important;
+}
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  direction: ltr;
+}
+::placeholder {
+  color: #bbb;
+}
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  --pos: right;
+  background-position: var(--pos) 0.25rem center;
+  background-size: 16px 12px;
+}
+html[dir="rtl"] .form-select {
+  --pos: left;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.icon {
+  display: inline-block;
+  color: #444;
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+  vertical-align: middle;
+  color: inherit;
+  pointer-events: none;
+}
+
+mark {
+  color: red;
+  font-weight: bold;
+  background: none;
+}
+
+.ͼ1.cm-focused {
+  outline: none;
+}
+
+/* Expand btn */
+.expand-btn {
+  padding: 0rem 0.8rem 0 0.5rem;
+}
+.expand-btn > svg {
+  transition: transform 200ms;
+}
+.expand-btn.expanded > svg {
+  transform: rotate(180deg);
+}
+
+.no-results {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #999;
+}
+
+/* Popover */
+.popover {
+  background: #fbfbfb;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 10px #ccc;
+  padding: 0.2rem 0.2rem;
+  margin-top: 0.1rem;
+  font-size: 0.9rem;
+}
+.popover-menu {
+  min-width: 6rem;
+}
+.popover-menu :is(button, a) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.15rem 0.3rem;
+  border-radius: 0;
+}
+.popover-menu :is(button:hover, a:hover) {
+  background: #eee;
+}
+.popover-menu-checkboxes :is(button, a) {
+  max-width: 15rem;
+  width: 100%;
+  padding: 0.15rem 0.3rem;
+  text-align: left;
+}
+.popover-menu-checkboxes :is(button:hover, a:hover) {
+  background: #eee;
+}
