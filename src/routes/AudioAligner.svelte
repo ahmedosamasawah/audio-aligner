@@ -112,7 +112,7 @@
   let time_input_mode = $state("manual");
   let manual_timing_text = $state("");
 
-  const API_KEY = process.env.API_KEY;
+  const API_KEY = import.meta.env.VITE_API_KEY;
   let has_utils_key = $state(true);
   // Initialize with empty values since we're not using stored state
 
