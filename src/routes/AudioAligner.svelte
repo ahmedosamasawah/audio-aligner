@@ -114,9 +114,6 @@
 
   const API_KEY = import.meta.env.VITE_API_KEY;
   let has_utils_key = $state(true);
-  // Initialize with empty values since we're not using stored state
-
-  // Removed state persistence since we're not using stored state
 
   function split_string(str, delimiter, limit) {
     const parts = str.split(delimiter);
